@@ -21,9 +21,9 @@ const monaSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Commit - Open-source Git client for macOS minimalists',
+  title: 'Magi - A batteries-included, cloud-agnostic framework for infrastructure-as-code, using the tools you already love.',
   description:
-    'Commit is a lightweight Git client you can open from anywhere any time you’re ready to commit your work with a single keyboard shortcut. It’s fast, beautiful, and completely unnecessary.',
+    'Magi is a small, but powerful, batteries-included, cloud-agnostic framework for infrastructure-as-code, using the tools you already love. Stop bikeshedding and start building!',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,

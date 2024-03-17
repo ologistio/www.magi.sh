@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { IconLink } from '@/components/IconLink'
 import { Logo } from '@/components/Logo'
 import { SignUpForm } from '@/components/SignUpForm'
+import ologistLogo from '@/images/ologist-logo-no-bg.png'
 
 function BookIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -32,12 +34,9 @@ function FeedIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" {...props}>
-      <path d="M9.51762 6.77491L15.3459 0H13.9648L8.90409 5.88256L4.86212 0H0.200195L6.31244 8.89547L0.200195 16H1.58139L6.92562 9.78782L11.1942 16H15.8562L9.51728 6.77491H9.51762ZM7.62588 8.97384L7.00658 8.08805L2.07905 1.03974H4.20049L8.17706 6.72795L8.79636 7.61374L13.9654 15.0075H11.844L7.62588 8.97418V8.97384Z" />
-    </svg>
-  )
+function OlogistIcon() {
+  return <Image src={ologistLogo} alt="Ologist Logo" width={20}/>
+  
 }
 
 export function Intro() {
@@ -49,20 +48,20 @@ export function Intro() {
         </Link>
       </div>
       <h1 className="mt-14 font-display text-4xl/tight font-light text-white">
-        Open-source Git client{' '}
-        <span className="text-sky-300">for macOS minimalists</span>
+        Infrastructure-as-code{' '}
+        <span className="text-sky-300">with the batteries included!</span>
       </h1>
       <p className="mt-4 text-sm/6 text-gray-300">
-        Commit is a lightweight Git client you can open from anywhere any time
-        you’re ready to commit your work with a single keyboard shortcut. It’s
-        fast, beautiful, and completely unnecessary.
+        Magi is a small, but powerful, cloud-agnostic framework for 
+        infrastructure-as-code, using the tools you already love.
+        Stop bikeshedding and start building!
       </p>
-      <SignUpForm />
+      {/* <SignUpForm /> */}
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
-        <IconLink href="#" icon={BookIcon} className="flex-none">
+        <IconLink href="https://docs.magi.sh" icon={BookIcon} className="flex-none">
           Documentation
         </IconLink>
-        <IconLink href="#" icon={GitHubIcon} className="flex-none">
+        <IconLink href="https://github.com/ologistio/magi" icon={GitHubIcon} className="flex-none">
           GitHub
         </IconLink>
         <IconLink href="/feed.xml" icon={FeedIcon} className="flex-none">
@@ -77,8 +76,8 @@ export function IntroFooter() {
   return (
     <p className="flex items-baseline gap-x-2 text-[0.8125rem]/6 text-gray-500">
       Brought to you by{' '}
-      <IconLink href="#" icon={XIcon} compact>
-        Joe Davola
+      <IconLink href="https://ologist.io" target='_blank' icon={OlogistIcon} compact>
+        Ologist
       </IconLink>
     </p>
   )

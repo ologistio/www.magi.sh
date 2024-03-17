@@ -10,13 +10,13 @@ export async function GET(req: Request) {
   }
 
   let author = {
-    name: 'Joe Davola',
-    email: 'crazy.joe@example.com',
+    name: 'Magi Maintainers',
+    email: 'magi@ologist.io',
   }
 
   let feed = new Feed({
-    title: 'Commit',
-    description: 'Open-source Git client for macOS minimalists',
+    title: 'Magi',
+    description: 'A batteries-included, cloud-agnostic framework for infrastructure-as-code, using the tools you already love.',
     author,
     id: siteUrl,
     link: siteUrl,
